@@ -58,7 +58,6 @@ body {
 .card:hover {
     transform: scale(1.08);
     box-shadow: 0 12px 32px #ff7728;
-    z-index: 2;
 }
 
 .card-link {
@@ -80,23 +79,44 @@ body {
     margin-bottom: 15px;
 }
 
-.card p {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.5;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    margin-top: 10px;
-    display: block;
+/*Estilização do modal de descrição dos cards*/
+
+.modal{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%; /*vai cobrir a tela e se for clicado vai fazer a ação*/
+    background: rgba(0,0,0,0.6);
+    display: none; /*para deixar ele invisível, assim ele vai servir para analisar se o usuário clicou fora do modal ou não*/
+    align-items: center;
+    justify-content: center;
 }
 
-.card:hover p {
-    opacity: 1;
-    max-height: 500px;
+.conteudoModalDojo{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    animation: AbrirModal 0.3s ease; /*Define o tempo e a suavidade com que o evento AbrirModal vai acontecer*/
 }
+
+.fecharModal { /*estilização do X*/
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+    
+    /*KeyFrames serve para fazer transições ou animações complexas*/
+    @keyframes AbrirModal {
+      from { transform: scale(0.8); opacity: 0; } /*Ele começa pequeno e invisível, dps aumenta e fica visível*/
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    /*Fim do modal*/
 
 .login-btn-container {
     width: 100%;
@@ -126,7 +146,6 @@ body {
 .card-button:hover {
    transform: scale(1.08);
     box-shadow: 0 12px 32px #ff7728;
-    z-index: 2;
 }
 
 .card-title {
