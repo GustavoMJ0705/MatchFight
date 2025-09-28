@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+/*Carrossel de fotos*/
+
+.Container-Carrossel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.carrossel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.buttonleft{
+    margin-left: 8vh;
+    margin-top: 3vh;
+    width: 4rem;
+    height:4rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ff7728;
+
+}
+
+.carrossel .buttonright{
+    margin-left: 2vh;
+    margin-top: 3vh;
+    width: 4rem;
+    height:4rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ff7728;
+}
+
+.entrar-button{
+    margin-left: 7.5vh;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff7728;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.entrar-button:hover{
+    transform: scale(1.1);
+}
+
+.minimg{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.minimg:hover{
+    transform: scale(1.1);
+}
+
+/*Cards de endereço e horário*/
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.mapa {
+  width: 100%;  /* ocupa toda a largura do card */
+  height: 250px;
+  border: 0;    /* remove a borda padrão do iframe */
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.enderecoNome{
+    font-weight: bold;
+        font-size: 1.13rem;
+        margin-bottom: 12px;
+        color: #ff7728;
+        letter-spacing: 1px;
+        text-align: center;
+        border-bottom: 2px solid #ff7728;
+        padding-bottom: 6px;
+        width: 100%;
+        background: #fff7f0;
+        border-radius: 6px 6px 0 0;
+}
+
+.infoEndereco, .infoHorarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/*Card de horários*/
+.semana-horarios {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 0;
+        margin: 32px 0;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 0;
+        width: 100%;
+        max-width: 950px;
+        border: 1px solid #ececec;
+}
+
+.dia-coluna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid #ececec;
+        padding: 18px 8px 18px 8px;
+        min-width: 120px;
+        background: #fafbfc;
+}
+.dia-coluna:last-child {
+        border-right: none;
+}
+
+.dia-nome {
+        font-weight: bold;
+        font-size: 1.13rem;
+        margin-bottom: 12px;
+        color: #ff7728;
+        letter-spacing: 1px;
+        text-align: center;
+        border-bottom: 2px solid #ff7728;
+        padding-bottom: 6px;
+        width: 100%;
+        background: #fff7f0;
+        border-radius: 6px 6px 0 0;
+}
+
+.horario-item {
+        background: #f5f5f5;
+        border-radius: 6px;
+        padding: 7px 0;
+        margin-bottom: 7px;
+        font-size: 1rem;
+        color: #333;
+        min-width: 80px;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+        border: 1px solid #ececec;
+}
+.horario-item:last-child {
+        margin-bottom: 0;
+}
+
+
+/*Descrição do Dojo*/
+
+.containerDescricao{
+        width: 60rem;
+        margin-left: 10rem;
+}
