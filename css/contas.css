@@ -60,12 +60,6 @@ body {
     box-shadow: 0 12px 32px #ff7728;
 }
 
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -89,10 +83,12 @@ body {
     display: none; /*para deixar ele invisível, assim ele vai servir para analisar se o usuário clicou fora do modal ou não*/
     align-items: center;
     justify-content: center;
+    z-index: 9999;
 }
 
 .conteudoModalDojo{
-    background: #fff;
+    color: #fff;
+    background: #1d1c1c;
     padding: 20px;
     border-radius: 8px;
     width: 300px;
@@ -101,22 +97,43 @@ body {
     animation: AbrirModal 0.3s ease; /*Define o tempo e a suavidade com que o evento AbrirModal vai acontecer*/
 }
 
-.fecharModal { /*estilização do X*/
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      color: #333;
-      cursor: pointer;
-    }
-    
-    /*KeyFrames serve para fazer transições ou animações complexas*/
-    @keyframes AbrirModal {
-      from { transform: scale(0.8); opacity: 0; } /*Ele começa pequeno e invisível, dps aumenta e fica visível*/
-      to   { transform: scale(1); opacity: 1; }
-    }
+.conteudoModalUsuario{
+    color: #fff;
+    background: #1d1c1c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    animation: AbrirModal 0.3s ease;
+}
 
-    /*Fim do modal*/
+.fecharModal { /*estilização do X*/
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #ff7728;
+    cursor: pointer;
+}
+
+.confirmar{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7728;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+/*KeyFrames serve para fazer transições ou animações complexas*/
+@keyframes AbrirModal {
+    from { transform: scale(0.8); opacity: 0; } /*Ele começa pequeno e invisível, dps aumenta e fica visível*/
+    to   { transform: scale(1); opacity: 1; }
+}
+
+/*Fim do modal*/
 
 .login-btn-container {
     width: 100%;
@@ -126,11 +143,11 @@ body {
 }
 
 .card-button {
-      transition: transform 1s cubic-bezier(0.4, 0, 1, 1), 
-                box-shadow 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
     cursor: pointer;
     background-color: #1d1c1c;
     border-radius: 10px;
+    border:none;
     max-width: 250px;
     min-height: 10px;
     padding: 30px;
@@ -145,7 +162,6 @@ body {
 
 .card-button:hover {
    transform: scale(1.08);
-    box-shadow: 0 12px 32px #ff7728;
 }
 
 .card-title {
