@@ -14,6 +14,19 @@ body {
     background-position: center; /* centraliza a imagem */
 }
 
+main{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 500px;
+}
+
 .login-button {
                 padding: 12px 32px;
                 background-color: #958c7c;
@@ -98,22 +111,16 @@ body {
     max-height: 500px;
 }
 
-.login-btn-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
 .card-button {
-      transition: transform 1s cubic-bezier(0.4, 0, 1, 1), 
-                box-shadow 1s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 1, 1);
     cursor: pointer;
     background-color: #1d1c1c;
     border-radius: 10px;
+    border:none;
     max-width: 250px;
     min-height: 10px;
-    padding: 30px;
+    margin-top: 10rem;
+    padding: 25px;
     text-align: center;
     flex: 1 1 250px;
     font-family: Arial, Helvetica, sans-serif;
@@ -125,8 +132,6 @@ body {
 
 .card-button:hover {
    transform: scale(1.08);
-    box-shadow: 0 12px 32px #ff7728;
-    z-index: 2;
 }
 
 .card-title {
