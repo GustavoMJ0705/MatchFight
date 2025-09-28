@@ -117,7 +117,7 @@ body {
     cursor: pointer;
 }
 
-.confirmar{
+.confirmar{ /*botão para ir pro cad*/
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #ff7728;
